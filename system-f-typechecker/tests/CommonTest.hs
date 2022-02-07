@@ -32,7 +32,6 @@ correct = testGroup "Correct typed expressions" $
     group0 :: [String]
     group0 =
       [ "/\\ a. /\\b. \\x : a. \\y : b. x : forall a. forall b. a -> b -> a"
-      , "/\\ a. /\\b. \\x : a. \\y : b. x : forall a. forall b. a -> b -> a"
       , "/\\ a. \\x : a. /\\b. \\y : b. x : forall a. a -> forall b. b -> a"
       , "/\\ g. /\\ a. /\\ b. \\x : g -> a -> b. \\y : g -> a. \\z : g. x z (y z) : forall g. forall a. forall b. (g -> a -> b) -> (g -> a) -> g -> b"
       , "\\x : forall a.a.x[(forall a.a) -> (forall a.a) -> (forall a.a)] : (forall a. a) -> (forall a. a) -> (forall a. a) -> forall a. a"
